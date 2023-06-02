@@ -1,0 +1,6 @@
+server:
+  port: 8089
+
+fixed:
+  rate:
+    string: 1000
