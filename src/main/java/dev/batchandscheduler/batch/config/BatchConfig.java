@@ -1,6 +1,7 @@
 package dev.batchandscheduler.batch.config;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.TimeUnit;
 
+@Slf4j
 @Configuration
 @RequiredArgsConstructor
 public class BatchConfig {
@@ -39,7 +41,7 @@ public class BatchConfig {
         return (stepContribution, chunkContext) -> {
             for (int i = 10; i > 0; i--) {
                 TimeUnit.SECONDS.sleep(10);
-                System.out.println(i);
+                log.debug(String.valueOf(i));
             }
             return RepeatStatus.FINISHED;
         };

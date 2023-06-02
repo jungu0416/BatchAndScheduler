@@ -4,3 +4,7 @@ server:
 fixed:
   rate:
     string: 1000
+
+logging:
+  level:
+    root: debug
