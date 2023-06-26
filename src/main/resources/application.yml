@@ -8,3 +8,8 @@ fixed:
 logging:
   level:
     root: debug
+
+spring:
+  batch:
+    job:
+      enabled: false

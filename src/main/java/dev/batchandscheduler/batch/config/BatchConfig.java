@@ -39,10 +39,7 @@ public class BatchConfig {
     @Bean
     public Tasklet simpleTasklet() {
         return (stepContribution, chunkContext) -> {
-            for (int i = 10; i > 0; i--) {
-                TimeUnit.SECONDS.sleep(10);
-                log.debug(String.valueOf(i));
-            }
+            log.debug("배치 실행 중입니다.");
             return RepeatStatus.FINISHED;
         };
     }
