@@ -31,7 +31,7 @@ public class BatchConfig {
     @Bean
     public Step simpleStep() {
         return this.stepBuilderFactory
-                .get("simple-step")
+                .get("simpleStep")
                 .tasklet(simpleTasklet())
                 .build();
     }
