@@ -39,7 +39,7 @@ public class BatchConfig {
     @Bean
     public Tasklet simpleTasklet() {
         return (stepContribution, chunkContext) -> {
-            log.debug("배치 실행 중입니다.");
+            log.info("배치 실행 중입니다.");
             return RepeatStatus.FINISHED;
         };
     }

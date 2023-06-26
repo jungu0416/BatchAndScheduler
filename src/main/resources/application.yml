@@ -7,7 +7,7 @@ fixed:
 
 logging:
   level:
-    root: debug
+    root: info
 
 spring:
   batch:
